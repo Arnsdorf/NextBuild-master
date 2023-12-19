@@ -1,0 +1,62 @@
+
+<ion-content class="ion-padding">
+
+  <div class="ion-text-center">
+    <h1 class="">Klar, Parat, <span class="next_build-color">Spil</span>!</h1>
+    <p class="ion-padding">
+      Vælg <span class="next_build-color">2 spil</span> du ønsker din computer skal kunne <span class="next_build-color">trække</span>.
+    </p>
+  </div>
+  <ion-grid class=" mt-0">
+    <ion-row>
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('H')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/cyperpunk.webp" />
+      </ion-col>
+
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('H')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/cod.webp" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('M')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/gta5.webp" />
+      </ion-col>
+
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('M')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/alien.webp" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('L')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/fortnite.webp" />
+      </ion-col>
+
+      <ion-col size-md="6" class="ion-text-center" (click)="selectGame('L')">
+        <img class="card" alt="Silhouette of mountains" src="../../assets/img/cs2.webp" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col>
+        <button expand="full" routerLink="/dashboard" routerDirection="root">
+          <div class="ion-align-items-center d-flex ion-justify-content-center">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Gå tilbage
+          </div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button expand="full" (click)="nextPage()" [disabled]="selectedComponentNames.length < 2">
+          <div class="ion-align-items-center d-flex ion-justify-content-center">
+            Gå videre
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

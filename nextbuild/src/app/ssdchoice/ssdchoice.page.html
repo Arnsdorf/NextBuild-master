@@ -1,0 +1,51 @@
+
+
+<ion-content class="custom-bg">
+    <div class="ion-text-center">
+        <h1 class="">Lagrings <span class="next_build-color">Valg</span></h1>
+        <p class="ion-padding">
+            <span class="next_build-color">Lagring</span> omhandler den tilgængelige plads til <span class="next_build-color">filer</span>, <span class="next_build-color">programmer</span> og <span class="next_build-color">spil</span>. Vælg den <span class="next_build-color">lagring</span> der passer bedst for dig.
+        </p>
+    </div>
+
+    <ion-grid class="mt-0">
+        <ion-row>
+            <ion-col size="6" class="ion-text-center" (click)="selectStorageCapacity('500gb')" [class.selected]="selectedStorageCapacity === '500gb'">
+                <div class="card-container">
+                    <img class="card" alt="lav lagring" src="../../assets/img/lav.png" />
+                </div>
+            </ion-col>
+            <ion-col size="6" class="ion-text-center" (click)="selectStorageCapacity('1tb')" [class.selected]="selectedStorageCapacity === '1tb'">
+                <div class="card-container">
+                    <img class="card" alt="middel lagring" src="../../assets/img/mid.png" />
+                </div>
+            </ion-col>
+        </ion-row>
+            <ion-col class="ion-text-center" (click)="selectStorageCapacity('2tb')" [class.selected]="selectedStorageCapacity === '2tb'">
+                <div class="card-container">
+                    <img class="card" alt="høj lagring" src="../../assets/img/stor.png" />
+                </div>
+            </ion-col>
+    </ion-grid>
+
+    <ion-grid class="ion-text-center">
+        <ion-row>
+            <ion-col>
+                <button expand="full" routerLink="/tabs/graphics-card-choice">
+                    <div class="ion-align-items-center d-flex ion-justify-content-center">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        Gå tilbage
+                    </div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button expand="full" (click)="nextPage()" [disabled]="selectedStorageCapacity === null">
+                    <div class="ion-align-items-center d-flex ion-justify-content-center">
+                        Gå videre
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
